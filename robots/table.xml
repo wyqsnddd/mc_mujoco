@@ -1,0 +1,20 @@
+<mujoco model="table">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_env_description//meshes/table/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="ground" file="ground.stl"/>
+    <mesh name="table" file="table.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="table"/>
+<body name="table_base_link"/>
+    <geom pos="0 0 -0.0380345" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="ground"/>
+    <geom pos="0 0 0" quat="1 -5.96047e-08 6.51683e-07 1.74846e-07" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.62 0.67 0.11 1" mesh="table"/>
+  </worldbody>
+</mujoco>

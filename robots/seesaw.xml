@@ -1,0 +1,24 @@
+<mujoco model="seesaw">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_int_obj_description/meshes/seesaw/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="base" file="base.stl"/>
+    <mesh name="board" file="board.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="seesaw"/>
+<body name="seesaw_base_link"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="base"/>
+    <body name="board">
+      <inertial pos="0 0 0.05875" quat="0 0.707107 0 0.707107" mass="21" diaginertia="5.058 3.939 1.121"/>
+      <joint name="board" pos="0 0 0" axis="0 1 0" range="-3.14159 3.14159"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="board"/>
+    </body>
+  </worldbody>
+</mujoco>

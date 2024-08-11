@@ -1,0 +1,22 @@
+<mujoco model="platform">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_env_description//meshes/platform/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="platform2" file="platform2.stl"/>
+    <mesh name="platform1" file="platform1.stl"/>
+    <mesh name="ground" file="ground.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="platform"/>
+<body name="platform_base_link"/>
+    <geom pos="1.5 0 1.06" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.46269 0.489086 0.8 1" mesh="platform2"/>
+    <geom pos="0.75 0 0.4" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.72303 0.259445 0.17624 1" mesh="platform1"/>
+    <geom pos="-2 0 -0.1" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.963705 1 0.266545 1" mesh="ground"/>
+  </worldbody>
+</mujoco>

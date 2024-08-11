@@ -1,0 +1,20 @@
+<mujoco model="box_table">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_env_description//meshes/box_table/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="ground" file="ground.stl"/>
+    <mesh name="box_table" file="box_table.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="box_table"/>
+<body name="box_table_base_link"/>
+    <geom pos="0 0 -0.0125" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.536712 0.719705 0.748388 1" mesh="ground"/>
+    <geom pos="0 0 0.48775" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.416992 0.559167 0.581451 1" mesh="box_table"/>
+  </worldbody>
+</mujoco>

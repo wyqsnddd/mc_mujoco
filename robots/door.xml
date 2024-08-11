@@ -1,0 +1,28 @@
+<mujoco model="door">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_int_obj_description/meshes/door/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="door" file="door.stl"/>
+    <mesh name="handle" file="handle.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="door"/>
+<body name="door_base_link"/>
+    <body name="door">
+      <inertial pos="-0.00724 0.441 1.029" mass="5" diaginertia="1 1 1"/>
+      <joint name="door" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="door"/>
+      <body name="handle" pos="-0.007 0.88 1.04" quat="0.5 -0.5 0.5 0.5">
+        <inertial pos="0 -0.034 -0.015" mass="0.2" diaginertia="1 1 1"/>
+        <joint name="handle" pos="0 0 0" axis="0 1 0" range="-1.5708 0.1"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="handle"/>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,22 @@
+<mujoco model="beam">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_env_description//meshes/beam/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="foot2" file="foot2.stl"/>
+    <mesh name="foot1" file="foot1.stl"/>
+    <mesh name="beam" file="beam.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="beam"/>
+<body name="beam_base_link"/>
+    <geom pos="2.3 0 0.025" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.083528 0.0758914 0.071533 1" mesh="foot2"/>
+    <geom pos="-2.3 0 0.025" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.083528 0.0758914 0.071533 1" mesh="foot1"/>
+    <geom pos="0 0 0.4" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.308484 0.318531 0.206405 1" mesh="beam"/>
+  </worldbody>
+</mujoco>

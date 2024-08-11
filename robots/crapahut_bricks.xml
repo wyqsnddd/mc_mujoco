@@ -1,0 +1,40 @@
+<mujoco model="crapahut_bricks">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_env_description//meshes/crapahut_bricks/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="pillar_1" file="pillar_1.stl"/>
+    <mesh name="pillar_3" file="pillar_3.stl"/>
+    <mesh name="pillar_4" file="pillar_4.stl"/>
+    <mesh name="pillar_5" file="pillar_5.stl"/>
+    <mesh name="pillar_6" file="pillar_6.stl"/>
+    <mesh name="pillar_2" file="pillar_2.stl"/>
+    <mesh name="slant_right" file="slant_right.stl"/>
+    <mesh name="slant_left" file="slant_left.stl"/>
+    <mesh name="support" file="support.stl"/>
+    <mesh name="start_left" file="start_left.stl"/>
+    <mesh name="start_right" file="start_right.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="crapahut_bricks"/>
+<body name="crapahut_bricks_base_link"/>
+    <geom size="0.1 0.05" type="cylinder" contype="0" conaffinity="0" group="1" density="0"/>
+    <geom size="0.1 0.05" type="cylinder"/>
+    <geom pos="0.238359 -0.369004 0.075" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="pillar_1"/>
+    <geom pos="0.238359 -0.369004 0.375" quat="1 0 -8.9407e-09 -4.39887e-08" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="pillar_3"/>
+    <geom pos="0.238359 -0.369004 0.525" quat="1 0 -8.9407e-09 -4.39887e-08" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="pillar_4"/>
+    <geom pos="0.238359 -0.369004 0.675" quat="1 0 -8.9407e-09 -4.39887e-08" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="pillar_5"/>
+    <geom pos="0.238359 -0.369004 0.825" quat="1 0 -8.9407e-09 -4.39887e-08" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="pillar_6"/>
+    <geom pos="0.238359 -0.369004 0.225" quat="1 0 -8.9407e-09 -4.39887e-08" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="pillar_2"/>
+    <geom pos="0.4 -0.095 0.12291" quat="0.991445 0 -0.130526 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="slant_right"/>
+    <geom pos="0.4 0.095 0.12291" quat="0.991445 0 -0.130526 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="slant_left"/>
+    <geom pos="0.548 0 0.05" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="support"/>
+    <geom pos="0 -0.095 0.075" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="start_left"/>
+    <geom pos="0 0.095 0.075" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="start_right"/>
+  </worldbody>
+</mujoco>

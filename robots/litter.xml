@@ -1,0 +1,24 @@
+<mujoco model="litter">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_int_obj_description/meshes/litter/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="platform" file="platform.stl"/>
+    <mesh name="chair" file="chair.stl"/>
+    <mesh name="right_pole" file="right_pole.stl"/>
+    <mesh name="left_pole" file="left_pole.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="litter"/>
+<body name="litter_base_link"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.565379 0.626651 0.243305 1" mesh="platform"/>
+    <geom pos="0 0.2 0.25" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.404169 0.44797 0.17393 1" mesh="chair"/>
+    <geom pos="-0.17 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.178856 0.138765 0.110568 1" mesh="right_pole"/>
+    <geom pos="0.17 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.178856 0.138765 0.110568 1" mesh="left_pole"/>
+  </worldbody>
+</mujoco>

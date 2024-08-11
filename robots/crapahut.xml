@@ -1,0 +1,26 @@
+<mujoco model="crapahut">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_env_description//meshes/crapahut/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="crapahut_start" file="crapahut_start.stl"/>
+    <mesh name="crapahut_goal" file="crapahut_goal.stl"/>
+    <mesh name="crapahut_right" file="crapahut_right.stl"/>
+    <mesh name="crapahut_left" file="crapahut_left.stl"/>
+    <mesh name="crapahut_ramp" file="crapahut_ramp.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="crapahut"/>
+<body name="crapahut_base_link"/>
+    <geom pos="-0.625 0 -0.025" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.296 0.412 0.429 1" mesh="crapahut_start"/>
+    <geom pos="0.6 0 0.25" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.296 0.412 0.429 1" mesh="crapahut_goal"/>
+    <geom pos="-0.01 -0.367753 0.325" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.355521 0.474411 0.626651 1" mesh="crapahut_right"/>
+    <geom pos="-0.01 0.367843 0.25" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.355521 0.474411 0.626651 1" mesh="crapahut_left"/>
+    <geom pos="-0.0117147 0 0.0436849" quat="0.991432 0 -0.130626 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.296 0.412 0.429 1" mesh="crapahut_ramp"/>
+  </worldbody>
+</mujoco>

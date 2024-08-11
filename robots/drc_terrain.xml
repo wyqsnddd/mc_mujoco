@@ -1,0 +1,152 @@
+<mujoco model="drc_terrain">
+  <compiler angle="radian" meshdir="/home/yuquan/local/mc_rtc_related/mc_env_description//meshes/drc_terrain/"/>
+<default>
+  <default class="collision">
+    <geom condim="3" group="0" />
+  </default>
+</default>
+
+  <asset>
+    <mesh name="ground" file="ground.stl"/>
+    <mesh name="wall" file="wall.stl"/>
+    <mesh name="zShapeIndexedFaceSet.66" file="zShapeIndexedFaceSet.66.stl"/>
+    <mesh name="zShapeIndexedFaceSet.65" file="zShapeIndexedFaceSet.65.stl"/>
+    <mesh name="zShapeIndexedFaceSet.64" file="zShapeIndexedFaceSet.64.stl"/>
+    <mesh name="zShapeIndexedFaceSet.63" file="zShapeIndexedFaceSet.63.stl"/>
+    <mesh name="zShapeIndexedFaceSet.62" file="zShapeIndexedFaceSet.62.stl"/>
+    <mesh name="zShapeIndexedFaceSet.61" file="zShapeIndexedFaceSet.61.stl"/>
+    <mesh name="zShapeIndexedFaceSet.60" file="zShapeIndexedFaceSet.60.stl"/>
+    <mesh name="zShapeIndexedFaceSet.59" file="zShapeIndexedFaceSet.59.stl"/>
+    <mesh name="brickA5" file="brickA5.stl"/>
+    <mesh name="brickB6" file="brickB6.stl"/>
+    <mesh name="zShapeIndexedFaceSet.56" file="zShapeIndexedFaceSet.56.stl"/>
+    <mesh name="zShapeIndexedFaceSet.55" file="zShapeIndexedFaceSet.55.stl"/>
+    <mesh name="zShapeIndexedFaceSet.54" file="zShapeIndexedFaceSet.54.stl"/>
+    <mesh name="zShapeIndexedFaceSet.53" file="zShapeIndexedFaceSet.53.stl"/>
+    <mesh name="zShapeIndexedFaceSet.52" file="zShapeIndexedFaceSet.52.stl"/>
+    <mesh name="zShapeIndexedFaceSet.51" file="zShapeIndexedFaceSet.51.stl"/>
+    <mesh name="zShapeIndexedFaceSet.50" file="zShapeIndexedFaceSet.50.stl"/>
+    <mesh name="zShapeIndexedFaceSet.49" file="zShapeIndexedFaceSet.49.stl"/>
+    <mesh name="zShapeIndexedFaceSet.48" file="zShapeIndexedFaceSet.48.stl"/>
+    <mesh name="zShapeIndexedFaceSet.47" file="zShapeIndexedFaceSet.47.stl"/>
+    <mesh name="zShapeIndexedFaceSet.46" file="zShapeIndexedFaceSet.46.stl"/>
+    <mesh name="zShapeIndexedFaceSet.45" file="zShapeIndexedFaceSet.45.stl"/>
+    <mesh name="zShapeIndexedFaceSet.44" file="zShapeIndexedFaceSet.44.stl"/>
+    <mesh name="zShapeIndexedFaceSet.43" file="zShapeIndexedFaceSet.43.stl"/>
+    <mesh name="zShapeIndexedFaceSet.42" file="zShapeIndexedFaceSet.42.stl"/>
+    <mesh name="zShapeIndexedFaceSet.41" file="zShapeIndexedFaceSet.41.stl"/>
+    <mesh name="zShapeIndexedFaceSet.40" file="zShapeIndexedFaceSet.40.stl"/>
+    <mesh name="brickC5" file="brickC5.stl"/>
+    <mesh name="zShapeIndexedFaceSet.38" file="zShapeIndexedFaceSet.38.stl"/>
+    <mesh name="zShapeIndexedFaceSet.37" file="zShapeIndexedFaceSet.37.stl"/>
+    <mesh name="zShapeIndexedFaceSet.36" file="zShapeIndexedFaceSet.36.stl"/>
+    <mesh name="zShapeIndexedFaceSet.35" file="zShapeIndexedFaceSet.35.stl"/>
+    <mesh name="zShapeIndexedFaceSet.34" file="zShapeIndexedFaceSet.34.stl"/>
+    <mesh name="zShapeIndexedFaceSet.33" file="zShapeIndexedFaceSet.33.stl"/>
+    <mesh name="zShapeIndexedFaceSet.32" file="zShapeIndexedFaceSet.32.stl"/>
+    <mesh name="zShapeIndexedFaceSet.31" file="zShapeIndexedFaceSet.31.stl"/>
+    <mesh name="zShapeIndexedFaceSet.30" file="zShapeIndexedFaceSet.30.stl"/>
+    <mesh name="zShapeIndexedFaceSet.29" file="zShapeIndexedFaceSet.29.stl"/>
+    <mesh name="zShapeIndexedFaceSet.28" file="zShapeIndexedFaceSet.28.stl"/>
+    <mesh name="brickA6" file="brickA6.stl"/>
+    <mesh name="zShapeIndexedFaceSet.26" file="zShapeIndexedFaceSet.26.stl"/>
+    <mesh name="zShapeIndexedFaceSet.25" file="zShapeIndexedFaceSet.25.stl"/>
+    <mesh name="zShapeIndexedFaceSet.24" file="zShapeIndexedFaceSet.24.stl"/>
+    <mesh name="zShapeIndexedFaceSet.23" file="zShapeIndexedFaceSet.23.stl"/>
+    <mesh name="zShapeIndexedFaceSet.22" file="zShapeIndexedFaceSet.22.stl"/>
+    <mesh name="zShapeIndexedFaceSet.21" file="zShapeIndexedFaceSet.21.stl"/>
+    <mesh name="zShapeIndexedFaceSet.20" file="zShapeIndexedFaceSet.20.stl"/>
+    <mesh name="zShapeIndexedFaceSet.19" file="zShapeIndexedFaceSet.19.stl"/>
+    <mesh name="zShapeIndexedFaceSet.18" file="zShapeIndexedFaceSet.18.stl"/>
+    <mesh name="zShapeIndexedFaceSet.17" file="zShapeIndexedFaceSet.17.stl"/>
+    <mesh name="zShapeIndexedFaceSet.16" file="zShapeIndexedFaceSet.16.stl"/>
+    <mesh name="zShapeIndexedFaceSet.15" file="zShapeIndexedFaceSet.15.stl"/>
+    <mesh name="zShapeIndexedFaceSet.14" file="zShapeIndexedFaceSet.14.stl"/>
+    <mesh name="zShapeIndexedFaceSet.13" file="zShapeIndexedFaceSet.13.stl"/>
+    <mesh name="brickB5" file="brickB5.stl"/>
+    <mesh name="brickC6" file="brickC6.stl"/>
+    <mesh name="zShapeIndexedFaceSet.10" file="zShapeIndexedFaceSet.10.stl"/>
+    <mesh name="zShapeIndexedFaceSet.09" file="zShapeIndexedFaceSet.09.stl"/>
+    <mesh name="zShapeIndexedFaceSet.08" file="zShapeIndexedFaceSet.08.stl"/>
+    <mesh name="zShapeIndexedFaceSet.07" file="zShapeIndexedFaceSet.07.stl"/>
+    <mesh name="zShapeIndexedFaceSet.06" file="zShapeIndexedFaceSet.06.stl"/>
+    <mesh name="zShapeIndexedFaceSet.05" file="zShapeIndexedFaceSet.05.stl"/>
+    <mesh name="zShapeIndexedFaceSet.04" file="zShapeIndexedFaceSet.04.stl"/>
+    <mesh name="zShapeIndexedFaceSet.03" file="zShapeIndexedFaceSet.03.stl"/>
+    <mesh name="zShapeIndexedFaceSet.02" file="zShapeIndexedFaceSet.02.stl"/>
+    <mesh name="zShapeIndexedFaceSet.01" file="zShapeIndexedFaceSet.01.stl"/>
+  </asset>
+
+  <worldbody>
+<geom class="collision" mesh="drc_terrain"/>
+<body name="drc_terrain_base_link"/>
+    <geom pos="2 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="ground"/>
+    <geom pos="0 0.279567 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.870588 0.721569 0.529412 1" mesh="wall"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.66"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.65"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.64"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.63"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.870588 0.721569 0.529412 1" mesh="zShapeIndexedFaceSet.62"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.61"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.60"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.59"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="brickA5"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="brickB6"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.56"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.55"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.54"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.53"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.52"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.51"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.50"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.49"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.48"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.47"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.46"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.45"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.44"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.43"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.42"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.41"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.40"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="brickC5"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.38"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.37"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.36"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.35"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.34"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.33"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.32"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.31"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.30"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.29"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.28"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="brickA6"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.26"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.25"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.24"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.23"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.22"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.21"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.20"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.19"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.18"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.17"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.16"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.15"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.14"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.13"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="brickB5"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="brickC6"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.10"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.09"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.08"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.07"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.06"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.05"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.04"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.03"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.02"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.4 0.4 0.4 1" mesh="zShapeIndexedFaceSet.01"/>
+  </worldbody>
+</mujoco>
