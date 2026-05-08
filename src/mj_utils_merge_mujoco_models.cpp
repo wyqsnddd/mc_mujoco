@@ -474,6 +474,21 @@ static void get_joint_names(const pugi::xml_node & in,
   }
 }
 
+static void remove_equality_constrained_joints(const pugi::xml_node & equality,
+                                               const std::string & prefix,
+                                               std::vector<std::string> & joints)
+{
+  for(const auto & eq : equality.children("joint"))
+  {
+    std::string joint1 = eq.attribute("joint1").value();
+    if(prefix.size())
+    {
+      joint1 = fmt::format("{}_{}", prefix, joint1);
+    }
+    joints.erase(std::remove(joints.begin(), joints.end(), joint1), joints.end());
+  }
+}
+
 static void get_motor_names(const pugi::xml_node & in,
                             const std::string & prefix,
                             const std::vector<std::string> & joints,
@@ -568,6 +583,7 @@ static MjRobot mj_robot_from_xml(const std::string & name, const std::string & x
     }
   }
   get_joint_names(root.child("worldbody"), prefix, out.mj_jnt_names, out.root_joint);
+  remove_equality_constrained_joints(root.child("equality"), prefix, out.mj_jnt_names);
   get_motor_names(root.child("actuator"), prefix, out.mj_jnt_names, out.mj_mot_names, out.mj_pos_act_names,
                   out.mj_vel_act_names);
   return out;
