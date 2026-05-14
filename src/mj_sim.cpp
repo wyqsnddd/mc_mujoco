@@ -382,9 +382,16 @@ void MjRobot::reset(const mc_rbdyn::Robot & robot)
   const auto & rjo = robot.module().ref_joint_order();
   if(rjo.size() != mj_jnt_names.size())
   {
+    mc_rtc::log::error("[mc_mujoco] Mismatch in model for {}: ref_joint_order has {} joints, MuJoCo has {} actuated "
+                       "joints (unactuated joints are automatically excluded)",
+                       name, rjo.size(), mj_jnt_names.size());
+    mc_rtc::log::error("[mc_mujoco] ref_joint_order joints:");
+    for(const auto & j : rjo) { mc_rtc::log::error("  - {}", j); }
+    mc_rtc::log::error("[mc_mujoco] MuJoCo actuated joints:");
+    for(const auto & j : mj_jnt_names) { mc_rtc::log::error("  - {}", j); }
     mc_rtc::log::error_and_throw<std::runtime_error>(
-        "[mc_mujoco] Missmatch in model for {}, reference joint order has {} joints but MuJoCo models has {} joints",
-        name, rjo.size(), mj_jnt_names.size());
+        "[mc_mujoco] Joint count mismatch for {}. Ensure all ref_joint_order joints have actuators in the MuJoCo XML.",
+        name);
   }
   mj_to_mbc.resize(0);
   mj_prev_ctrl_q.resize(0);

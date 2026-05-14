@@ -528,6 +528,34 @@ static void get_motor_names(const pugi::xml_node & in,
   joint_to_act("velocity", vel_acts);
 }
 
+static void remove_unactuated_joints(std::vector<std::string> & joints,
+                                     std::vector<std::string> & motors,
+                                     std::vector<std::string> & pos_acts,
+                                     std::vector<std::string> & vel_acts)
+{
+  size_t out = 0;
+  for(size_t i = 0; i < joints.size(); ++i)
+  {
+    if(motors[i].empty() && pos_acts[i].empty() && vel_acts[i].empty())
+    {
+      mc_rtc::log::info("[mc_mujoco] Excluding unactuated joint {} from joint list", joints[i]);
+      continue;
+    }
+    if(out != i)
+    {
+      joints[out] = std::move(joints[i]);
+      motors[out] = std::move(motors[i]);
+      pos_acts[out] = std::move(pos_acts[i]);
+      vel_acts[out] = std::move(vel_acts[i]);
+    }
+    out++;
+  }
+  joints.resize(out);
+  motors.resize(out);
+  pos_acts.resize(out);
+  vel_acts.resize(out);
+}
+
 static void mj_object_from_xml(const std::string & name, const std::string & xmlFile, MjObject & object)
 {
   char error[1000] = "Could not load XML model";
@@ -586,6 +614,7 @@ static MjRobot mj_robot_from_xml(const std::string & name, const std::string & x
   remove_equality_constrained_joints(root.child("equality"), prefix, out.mj_jnt_names);
   get_motor_names(root.child("actuator"), prefix, out.mj_jnt_names, out.mj_mot_names, out.mj_pos_act_names,
                   out.mj_vel_act_names);
+  remove_unactuated_joints(out.mj_jnt_names, out.mj_mot_names, out.mj_pos_act_names, out.mj_vel_act_names);
   return out;
 }
 
